@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300'
+    rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel=
+    'stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="animate.css">
+    <style type="text/css">
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+    </style>
+    <style type="text/css">
+body {
+    background: #292929;
+    font-family: "Open Sans" !important;
+      line-height: 1.6;
+    }
+
+
+    #banner {
+    margin: auto auto;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    background-color: #ED3C95;
+    height: 3px;
+    }
+
+
+    #banner .line1 {
+    font-family: "EB Garamond";
+    font-size: 20px;
+    color: #9ca4b0;
+    max-width: 200px;
+    margin: auto auto;
+    padding: 20px 5px 5px 5px;
+    }
+
+    #browser {
+    width: 80%;
+    height: 320px;
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    background: #FFF;
+    box-shadow: 0 50px 50px rgba(143, 150, 159, 0.17);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    transition: all 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    #browser:hover {
+    box-shadow: 0 30px 30px rgba(143, 150, 159, 0.27);
+    margin-top: 50px;
+    margin-bottom: 0;
+    }
+
+    #browser img {
+    max-width: 100%
+    }
+
+    #top {
+    border-bottom: 1px solid #CCC;
+    padding: 10px 10px 5px 79px;
+    }
+
+    #buttons {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: inline;
+    margin-right: 2px;
+    }
+
+    .button {
+    display: inline-block;
+    border: 1px solid #ccc;
+    width: 10px;
+    height: 10px;
+    margin-right: 2px;
+    border-radius: 50%;
+    }
+    .button:last-child {
+    margin-right: 6px;
+    }
+
+    #bar {
+    border: 1px solid #CCC;
+    width: 100%;
+    height: 25px;
+    display: inline-block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 10px;
+    color: #9DA5B1;
+    padding: 5px 20px 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+
+    #content {
+    position: relative;
+    padding: 10%;
+    max-height: 275px;
+    box-sizing: border-box;
+    overflow: auto;
+    }
+    #content #title {
+    overflow: auto;
+    position: relative;
+    font-family: "Open sans";
+    margin-bottom: 30px;
+    }
+    #content #title #author {
+    float: left;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 20px;
+    color: #6A727C;
+    }
+    #content #title #points {
+    float: left;
+    display: inline-block;
+    margin: 13px;
+    font-weight: 100;
+    color: #9DA5B1;
+    }
+    #content #title #eta img {
+    opacity: 0.6;
+    position: absolute;
+    top: 10px;
+    width: 25px;
+    right: 66px;
+    height: 25px;
+    }
+    #content #title #eta span {
+    position: absolute;
+    right: 14px;
+    top: 13px;
+    color: #9DA5B1;
+    font-weight: 100;
+    }
+    #content #text {
+    font-family: "EB Garamond";
+    font-weight: 300;
+    line-height: 1.7;
+    color: #3D434B;
+    }
+
+    #done {
+    margin: 40px auto 0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 !important;
+    border: 2px solid #6A727C;
+    color: #6A727C;
+    font-family: "Lato", "Open Sans", sans-serif;
+    width: 160px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+    }
+
+    h1 {
+    margin: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #6A727C;
+    font-family: "Open Sans";
+    font-size: 21px;
+    border-bottom: 2px #FFFFFF;
+    padding-top: 30px;
+    border-bottom: dotted 1px #535c5f;
+    }
+
+    h2 {
+    margin: auto;
+    text-align: center;
+    padding: 50px 100px 20px;
+    font-weight: 100;
+    line-height: 1.6;
+    color: #6A727C;
+    font-family: "Open Sans";
+    }
+
+    h3 {
+    margin: auto;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #000000;
+    font-family: "Open Sans" !important;
+    font-size: 21px !important;
+    }
+
+    .result {
+      background-color: #FFFFFF;
+    padding: 10px;
+        border-bottom: dotted 1px #535c5f;
+    }
+
+    .share-area {
+    
+    background-color: #FFFFFF;
+    margin: auto auto;
+    }
+
+    #sharelink {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #6A727C;
+    font-family: "Open Sans";
+    padding: 10px;
+    text-align:left;
+    }
+
+    .sendlink {
+    color: #273045;
+    text-decoration: underline;
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 24px;
+    }
+
+    a.landing-btn {
+    color: #101010;
+    font-family: "Open Sans";
+    background-color: #D2D9DC;
+    padding: 8px 15px;
+    margin: 40px 0px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    -moz-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+    }
+
+      a.landing-btn:hover {
+    background-color: #e9ecee;
+  }
+
+
+    #chromeStoreLink img {
+    width: 280px;
+    }
+
+    img {width: 100%;}
+
+    .small-text {
+    margin: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #535C5F;
+    font-family: "Open Sans";
+    font-size: 18px;
+    border-bottom: 2px #FFFFFF;
+    padding-top: 21px;
+    border-bottom: dotted 1px #535c5f;
+    }
+
+     .button-text {
+    margin: auto;
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #535C5F;
+    font-family: "Open Sans";
+    font-size: 18px;
+    border-bottom: 2px #FFFFFF;
+    padding-top: 21px;
+    }
+
+    .positive {border-left: solid 5px #46DA18;}
+    .negative {border-left: solid 5px #c0392b;}
+
+    code {
+      font-family: 'monospace' !important;
+      color: #444;
+      background-color: #fffea7;}
+
+
+    </style>
+    <link href="stylesheets/base.css" rel="stylesheet">
+    <link href="stylesheets/skeleton.css" rel="stylesheet">
+    <link href="stylesheets/layout.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id='banner'></div>
+
+    <br><br>
+
+        <div class="container">
+        <div class="fifteen columns">
+        <h1>5658-195-SXU_FINAL.html</h1>
+        <p class="small-text">Layout 03</p>
+        <p class="small-text">Share this design with colleagues: <a style="color:white;" href="#">https://mmi.email/pa89b887</a></p>
+        <p class="button-text"><a class="landing-btn" href="#">Download ZIP file</a></p>
+
+        </div>
+
+    </div>
+
+        <div class="container">
+    <div class="five columns">
+    <h2>Desktop</h2>
+    <img src="desktop.png">
+    </div>
+
+    <div class="five columns">
+    <h2>iPad</h2>
+    <img src="ipad.png">
+    </div>
+
+    <div class="five columns">
+    <h2>iPhone</h2>
+    <img src="iphone.png">
+    </div>
+
+    </div>
+<br />
+
+    <div class="container">
+        <div class="seven columns">
+            <h1>Test Results</h1>
+        </div>
+
+    </div>
+<br />
+
+
+    <br />
+
+    <div class="container">
+        <div class="fifteen columns">
+            <div class="result negative">
+                <h3>Your email does not include a link to a web version</h3>
+
+
+                <p>Including a link to an online/web version of your email
+                provides subscribers with an opportunity to view your email in
+                all its glory, even if their email client or mobile device
+                doesn't support HTML. We may not be able to detect special tags
+                in your HTML if your mailing service automatically creates a
+                web/online version for you.</p>
+            </div>
+            <!-- result -->
+
+            
+
+
+            <div class="result positive">
+                <h3>Yay! All your links have absolute paths</h3>
+
+
+                <p>Since your email could be loaded in lots of different
+                environments, it's important that your links have absolute
+                paths. Subscribers may not be able to click on relative links
+                in an email, especially if they are outside your company
+                network. Absolute links will begin with <code>http://</code> or
+                <code>https://</code>.</p>
+            </div>
+            <!-- result -->
+
+            
+
+
+            <div class="result negative">
+                <h3>It looks like some of your images don't have a
+                <code>height</code> and <code>width</code> set</h3>
+
+
+                <p>Here are the ones we noticed:</p>
+
+
+                <ol>
+                    <li><code>img/logo.png</code>
+                    </li>
+
+
+                    <li><code>img/header.jpg</code>
+                    </li>
+
+
+                    <li><code>img/store-image.jpg</code>
+                    </li>
+                </ol>
+
+
+                <p>Specifying an accurate height and width on images helps
+                ensure that your graphics display properly. Including height
+                and width on images also helps alt text display by creating a
+                placeholder in email clients that block images by default.</p>
+            </div>
+            <!-- result -->
+
+            
+
+
+            <div class="result negative">
+                <h3>It looks like some of your image URLs have relative
+                paths</h3>
+
+
+                <p>Here are the ones we noticed:</p>
+
+
+                <ol>
+                    <li><code>img/logo.png</code>
+                    </li>
+
+
+                    <li><code>img/header.jpg</code>
+                    </li>
+
+
+                    <li><code>img/store-image.jpg</code>
+                    </li>
+                </ol>
+
+
+                <p>Similar to relative and absolute links (above), you'll want
+                to be sure all your images have absolute URLs, too. Your
+                subscribers won't be able to see images in your email that are
+                linked with relative paths. Since we're unable to upload your
+                images, you'll want to host your images elsewhere before
+                performing this check. If you upload a zip file of HTML and
+                images to your mailing service, they may create absolute paths
+                for you.</p>
+            </div>
+            <!-- result -->
+
+            
+
+
+            <div class="result positive">
+                <h3>Woo! All your images have <code>alt</code> attributes</h3>
+
+
+                <p>Since many email clients block images by default, it's
+                likely that your email will be viewed frequently with images
+                "turned off". Using alt attributes to describe the images in
+                your email allows recipients to understand your message even
+                when they can't see the images.</p>
+            </div>
+            <!-- result -->
+
+
+            <div class="result informational">
+                <h3>Your preview text</h3>
+
+
+                <p>Your preview text will appear as:</p>
+
+
+                <p class="preview"><code>Preview Text View email in your
+                browser &lt;!-- &lt;table align=&quot;center&quot;
+                bgcolor=&quot;#000000&quot; border=&quot;0&quot; cell</code>
+                </p>
+
+
+                <p>Some email clients (iPhone, Gmail, Outlook for example) will
+                display the first few lines of text from the body of your email
+                alongside the subject line. This text can help your recipients
+                decide whether to open or trash your message. Think of this
+                text as a secondary subject line, providing the reader a
+                summary of your content. The exact amount of preview text shown
+                will vary between email clients and user settings.</p>
+            </div>
+            <!-- result -->
+
+            
+
+
+            <div class="result positive">
+                <h3>Great! Your email includes a
+                <code>&lt;title&gt;</code></h3>
+
+
+                <p>When the online/web version of your email is viewed, the
+                title will appear in the top bar of the viewer's web
+                browser.</p>
+            </div>
+            <!-- result -->
+        </div>
+    </div>
+
+
+    <h2>Made with &hearts; in Chicago.</h2>
+</body>
+</html>

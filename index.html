@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+<style type="text/css">a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}</style>
+
+<style type="text/css">
+body {
+  background: #f3f6f8;
+}
+
+
+#banner {
+  margin: auto auto;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  background-color: #231F20;
+  padding-bottom: 20px
+}
+
+
+#banner .line1 {
+  font-family: "EB Garamond";
+  font-size: 20px;
+  color: #9ca4b0;
+  max-width: 200px;
+  margin: auto auto;
+  padding: 20px 5px 5px 5px;
+}
+
+#browser {
+  width: 80%;
+  height: 320px;
+  max-width: 600px;
+  border: 1px solid #CCC;
+  position: relative;
+  border-radius: 5px;
+  margin: auto;
+  background: #FFF;
+  box-shadow: 0 50px 50px rgba(143, 150, 159, 0.17);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  transition: all 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#browser:hover {
+  box-shadow: 0 30px 30px rgba(143, 150, 159, 0.27);
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+#browser img {
+max-width: 100%
+}
+
+#top {
+  border-bottom: 1px solid #CCC;
+  padding: 10px 10px 5px 79px;
+}
+
+#buttons {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: inline;
+  margin-right: 2px;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid #ccc;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  border-radius: 50%;
+}
+.button:last-child {
+  margin-right: 6px;
+}
+
+#bar {
+  border: 1px solid #CCC;
+  width: 100%;
+  height: 25px;
+  display: inline-block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: #9DA5B1;
+  padding: 5px 20px 0 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#content {
+  position: relative;
+  padding: 10%;
+  max-height: 275px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+#content #title {
+  overflow: auto;
+  position: relative;
+  font-family: "Open sans";
+  margin-bottom: 30px;
+}
+#content #title #author {
+  float: left;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 900;
+  padding-bottom: 20px;
+  color: #6A727C;
+}
+#content #title #points {
+  float: left;
+  display: inline-block;
+  margin: 13px;
+  font-weight: 100;
+  color: #9DA5B1;
+}
+#content #title #eta img {
+  opacity: 0.6;
+  position: absolute;
+  top: 10px;
+  width: 25px;
+  right: 66px;
+  height: 25px;
+}
+#content #title #eta span {
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  color: #9DA5B1;
+  font-weight: 100;
+}
+#content #text {
+  font-family: "EB Garamond";
+  font-weight: 300;
+  line-height: 1.7;
+  color: #3D434B;
+}
+
+#done {
+  margin: 40px auto 0;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0 !important;
+  border: 2px solid #6A727C;
+  color: #6A727C;
+  font-family: "Lato", "Open Sans", sans-serif;
+  width: 160px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  padding: 50px 100px 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #6A727C;
+  font-family: "Open Sans";
+  font-size: 18px;
+}
+
+h2 {
+  margin: auto;
+  text-align: center;
+  padding: 50px 100px 20px;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #6A727C;
+  font-family: "Open Sans";
+}
+
+#chromeStoreLink {
+  display: block;
+  text-align: center;
+  width: 280px;
+  margin: auto;
+}
+#chromeStoreLink img {
+  width: 280px;
+}
+
+a:visted {text-decoration: none;}
+
+
+</style>
+</head>
+<body>
+
+<div id='banner'>
+  <div class='line1'>
+    <img src="mmi-logo.svg">
+  </div>
+</div>
+
+<h1>Behold! The easiest way to get share emails with your colleagues.</h1>
+
+<div id='browser'>
+  <a href="pa89b887.html" style="none"><img src="mmi-drag-n-drop.svg"></a>
+</div>
+</div>
+<h2>We verify your email design against our checklist before you send.</h2>
+
+</body>
+</html>
+
+
